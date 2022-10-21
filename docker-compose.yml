@@ -1,0 +1,25 @@
+version: '3'
+services:
+  server:
+    container_name: NODE_APP
+    build: '.'
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - '8080:8080'
+    networks:
+      - host
+
+  db:
+    image: 'mongo'
+    container_name: MONGODB_APP
+    ports:
+      - '27017:27017'
+    networks:
+      - host
+
+networks: 
+  host:
+    driver: bridge
