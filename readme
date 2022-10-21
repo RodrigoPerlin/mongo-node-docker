@@ -1,0 +1,5 @@
+- deleta cada img = docker image rm node-web-app
+
+- build de uma  = docker build . -t node-web
+- rodar img = docker run -p 8080:8080 -d node-web
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
